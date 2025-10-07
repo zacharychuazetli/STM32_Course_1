@@ -1,0 +1,102 @@
+12:56:57 **** Clean-only build of configuration Debug for project 013SVC_Number_math ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f407vgtx.d ./Startup/startup_stm32f407vgtx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf 012SVC_Number.elf 012SVC_Number.list 012SVC_Number.map default.size.stdout
+ 
+13:07:28 **** Build of configuration Debug for project 013SVC_Number_math ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+../Src/main.c: In function 'SVC_Handler_C':
+../Src/main.c:102:16: error: 'pBaseStackFrame' undeclared (first use in this function); did you mean 'pBaseOfStackFrame'?
+  102 |         arg0 = pBaseStackFrame[0];
+      |                ^~~~~~~~~~~~~~~
+      |                pBaseOfStackFrame
+../Src/main.c:102:16: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:117:30: error: 'ag1' undeclared (first use in this function); did you mean 'arg1'?
+  117 |                 res = arg0 / ag1;
+      |                              ^~~
+      |                              arg1
+../Src/main.c:81:29: warning: variable 'res' set but not used [-Wunused-but-set-variable]
+   81 |         int32_t arg0, arg1, res;
+      |                             ^~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:07:55 **** Incremental Build of configuration Debug for project 013SVC_Number_math ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SVC_Handler_C':
+../Src/main.c:102:16: error: 'pBaseStackFrame' undeclared (first use in this function); did you mean 'pBaseOfStackFrame'?
+  102 |         arg0 = pBaseStackFrame[0];
+      |                ^~~~~~~~~~~~~~~
+      |                pBaseOfStackFrame
+../Src/main.c:102:16: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:117:30: error: 'ag1' undeclared (first use in this function); did you mean 'arg1'?
+  117 |                 res = arg0 / ag1;
+      |                              ^~~
+      |                              arg1
+../Src/main.c:81:29: warning: variable 'res' set but not used [-Wunused-but-set-variable]
+   81 |         int32_t arg0, arg1, res;
+      |                             ^~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:08:28 **** Incremental Build of configuration Debug for project 013SVC_Number_math ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "013SVC_Number_math.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\zchua\OneDrive - Intel Corporation\Desktop\STM32_Course_1\013SVC_Number_math\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="013SVC_Number_math.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 013SVC_Number_math.elf
+ 
+arm-none-eabi-size  013SVC_Number_math.elf 
+arm-none-eabi-objdump -h -S 013SVC_Number_math.elf  > "013SVC_Number_math.list"
+   text	   data	    bss	    dec	    hex	filename
+   5588	     92	   1900	   7580	   1d9c	013SVC_Number_math.elf
+Finished building: default.size.stdout
+ 
+Finished building: 013SVC_Number_math.list
+ 
+13:08:40 **** Incremental Build of configuration Debug for project 013SVC_Number_math ****
+make -j8 all 
+arm-none-eabi-size  013SVC_Number_math.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5588	     92	   1900	   7580	   1d9c	013SVC_Number_math.elf
+Finished building: default.size.stdout
+ 
+13:12:18 **** Incremental Build of configuration Debug for project 013SVC_Number_math ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "013SVC_Number_math.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\zchua\OneDrive - Intel Corporation\Desktop\STM32_Course_1\013SVC_Number_math\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="013SVC_Number_math.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 013SVC_Number_math.elf
+ 
+arm-none-eabi-size  013SVC_Number_math.elf 
+arm-none-eabi-objdump -h -S 013SVC_Number_math.elf  > "013SVC_Number_math.list"
+   text	   data	    bss	    dec	    hex	filename
+   5584	     92	   1900	   7576	   1d98	013SVC_Number_math.elf
+Finished building: default.size.stdout
+ 
+Finished building: 013SVC_Number_math.list
+ 
+14:01:45 **** Incremental Build of configuration Debug for project 013SVC_Number_math ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "013SVC_Number_math.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\zchua\OneDrive - Intel Corporation\Desktop\STM32_Course_1\013SVC_Number_math\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="013SVC_Number_math.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 013SVC_Number_math.elf
+ 
+arm-none-eabi-size  013SVC_Number_math.elf 
+arm-none-eabi-objdump -h -S 013SVC_Number_math.elf  > "013SVC_Number_math.list"
+   text	   data	    bss	    dec	    hex	filename
+   5576	     92	   1900	   7568	   1d90	013SVC_Number_math.elf
+Finished building: default.size.stdout
+ 
+Finished building: 013SVC_Number_math.list
+ 
+14:02:25 **** Incremental Build of configuration Debug for project 013SVC_Number_math ****
+make -j8 all 
+arm-none-eabi-size  013SVC_Number_math.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5576	     92	   1900	   7568	   1d90	013SVC_Number_math.elf
+Finished building: default.size.stdout
+ 

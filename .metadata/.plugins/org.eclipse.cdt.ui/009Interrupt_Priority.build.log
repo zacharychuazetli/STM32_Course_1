@@ -1,0 +1,17 @@
+18:53:41 **** Incremental Build of configuration Debug for project 009Interrupt_Priority ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "009Interrupt_Priority.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\zchua\OneDrive - Intel Corporation\Desktop\STM32_Course_1\009Interrupt_Priority\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="009Interrupt_Priority.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 009Interrupt_Priority.elf
+ 
+arm-none-eabi-size  009Interrupt_Priority.elf 
+arm-none-eabi-objdump -h -S 009Interrupt_Priority.elf  > "009Interrupt_Priority.list"
+   text	   data	    bss	    dec	    hex	filename
+   3636	    104	   1904	   5644	   160c	009Interrupt_Priority.elf
+Finished building: default.size.stdout
+ 
+Finished building: 009Interrupt_Priority.list
+ 
+
+18:53:45 Build Finished. 0 errors, 0 warnings. (took 3s.840ms)
+

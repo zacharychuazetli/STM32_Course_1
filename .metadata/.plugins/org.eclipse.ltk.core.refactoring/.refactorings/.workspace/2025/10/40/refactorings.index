@@ -1,0 +1,11 @@
+1759299665226	Delete resource '008USART3_int_pend/001HelloWorld.launch'
+1759313688301	Rename resource '001HelloWorld2'
+1759313696531	Delete resource '009Interrupt_Priority/001HelloWorld.launch'
+1759340822827	Delete resource '010Exception_entry_exit/002Operation_modes.launch'
+1759374579837	Delete resource '010Exception_entry_exit/002Operation_modes (1).launch'
+1759374586816	Delete resource '010Exception_entry_exit/Debug/002Operation_modes.elf'
+1759385774907	Delete resource '011Fault_gen/001HelloWorld.launch'
+1759388955336	Delete resource '011Fault_gen/Debug/001HelloWorld.elf'
+1759471864995	Delete 2 resources
+1759484775067	Rename resource '020SVC_Number'
+1759484784841	Delete resource '012SVC_Number/001HelloWorld.launch'

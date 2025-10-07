@@ -1,0 +1,17 @@
+02:58:33 **** Incremental Build of configuration Debug for project 012SVC_Number ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "012SVC_Number.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\zchua\OneDrive - Intel Corporation\Desktop\STM32_Course_1\012SVC_Number\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="012SVC_Number.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 012SVC_Number.elf
+ 
+arm-none-eabi-size  012SVC_Number.elf 
+arm-none-eabi-objdump -h -S 012SVC_Number.elf  > "012SVC_Number.list"
+   text	   data	    bss	    dec	    hex	filename
+   5204	     92	   1900	   7196	   1c1c	012SVC_Number.elf
+Finished building: default.size.stdout
+ 
+Finished building: 012SVC_Number.list
+ 
+
+02:58:37 Build Finished. 0 errors, 0 warnings. (took 4s.769ms)
+

@@ -1,0 +1,11 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001HelloWorld,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002Operation_modes,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001HelloWorld_Semihosting Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003Inline_1,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:004Access_levels,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:005Tbit,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:006Bit_banding,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:007Stack,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:008USART3_int_pend,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:009Interrupt_Priority,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:010Exception_entry_exit,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:011Fault_gen,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:012SVC_Number,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:013SVC_Number_math
+eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001HelloWorld/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001HelloWorld/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002Operation_modes/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002Operation_modes/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:006Bit_banding/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:001HelloWorld_Semihosting\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
